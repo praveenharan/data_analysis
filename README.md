@@ -25,9 +25,6 @@ The project utilizes three core tables to manage university data:
 |               | department         |               | Department offering the course  |
 |               | credits            |               | Number of credits awarded       |
 
-
-*(Note: For a real project, you would typically generate and include a proper ERD image here, perhaps using tools like dbdiagram.io or Lucidchart.)*
-
 ## Files in this Repository
 
 * `db_schema.sql`: SQL script to define and create the database tables.
