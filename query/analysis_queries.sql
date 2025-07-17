@@ -1,16 +1,23 @@
 USE university_db;
 
 -- 1. Get the total number of students
-SELECT COUNT(*) AS total_students FROM Students;
+SELECT 
+    COUNT(*) AS total_students
+FROM
+    Students;
 
 -- 2. Get the total number of courses
-SELECT COUNT(*) AS total_courses FROM Courses;
+SELECT 
+    COUNT(*) AS total_courses 
+FROM Courses;
 
 -- 3. Get the total number of enrollments
-SELECT COUNT(*) AS total_enrollments FROM Enrollments;
+SELECT 
+    COUNT(*) AS total_enrollments 
+FROM Enrollments;
 
 -- 4. Find the top 3 most enrolled courses (by number of students)
-SELECT
+SELECT TOP 3
     C.course_name,
     C.course_code,
     COUNT(E.student_id) AS number_of_enrollments
@@ -19,10 +26,10 @@ FROM
 JOIN
     Enrollments E ON C.course_id = E.course_id
 GROUP BY
-    C.course_name, C.course_code
+    C.course_name,
+    C.course_code
 ORDER BY
-    number_of_enrollments DESC
-LIMIT 3;
+    number_of_enrollments DESC;
 
 -- 5. List all students and the courses they are enrolled in
 --    (Includes students not enrolled in any course)
