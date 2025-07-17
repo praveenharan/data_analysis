@@ -76,11 +76,4 @@ The project utilizes three core tables to manage university data:
 * **Students Not Enrolled in Any Course:** Helps identify inactive student records.
 * **Enrollment Count Per Department:** Aggregates enrollments by academic department.
 * **Average Credits Enrolled Per Student:** Calculates the average credit load.
-
-## Future Enhancements
-* Add more tables: `Professors`, `Departments`, `Grades`, `Prerequisites`.
-* Implement more complex queries: e.g., finding students who have completed all courses in a specific major, identifying courses with low enrollment for cancellation.
-* Integrate with a programming language (e.g., Python) to visualize the analysis results.
-* Set up a simple web interface to interact with the database.
-
 ---
