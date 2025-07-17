@@ -1,6 +1,6 @@
 Here's how to adapt those instructions for SQL Server Management Studio (SSMS), which is used for Microsoft SQL Server databases:
 
-Prerequisites
+# Prerequisites
 Microsoft SQL Server Database Engine: You need an instance of SQL Server installed and running (e.g., SQL Server Express, Developer Edition, or a full version).
 
 SQL Server Management Studio (SSMS): This is the client tool you'll use to connect to and manage your SQL Server instance.
