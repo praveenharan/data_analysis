@@ -39,19 +39,20 @@ The project utilizes three core tables to manage university data:
 ### Steps
 1.  **Create the Database:**
     -- Check if the database `university_db` already exists
+    
     `IF NOT EXISTS (SELECT name FROM sys.databases WHERE name = 'university_db')
     BEGIN
         -- If it does not exist, create the database
         CREATE DATABASE university_db;
     END;`
 
-2.  **Create Tables:**
+3.  **Create Tables:**
     Execute the `db_schema.sql` file. This will set up the `Students`, `Courses`, and `Enrollments` tables.
     
-3.  **Insert Sample Data:**
+4.  **Insert Sample Data:**
     Execute the `sample_data.sql` file. This will populate tables with example records.
     
-4.  **Run Analysis Queries:**
+5.  **Run Analysis Queries:**
     Open `analysis_queries.sql` in your SQL client. Execute the queries one by one to see the analytical results.
 
 ## Analysis Examples (from `analysis_queries.sql`)
