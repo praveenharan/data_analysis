@@ -34,34 +34,23 @@ The project utilizes three core tables to manage university data:
 ## How to Set Up and Run
 
 ### Prerequisites
-* A SQL database system (e.g., PostgreSQL, MySQL, SQLite). The provided scripts are written with general SQL syntax that should work across most systems, but are tested with MySQL.
-* A SQL client (e.g., MySQL Workbench, DBeaver, pgAdmin) or command-line interface.
+* These scripts use general SQL syntax and have been verified to work correctly within SSMS (SQL Server Management Studio).
 
 ### Steps
 1.  **Create the Database:**
-    If using MySQL, open your SQL client or command line and execute:
-    ```sql
-    CREATE DATABASE IF NOT EXISTS university_db;
-    USE university_db;
-    ```
-    (Adjust for other database systems, e.g., `CREATE DATABASE university_db;` for PostgreSQL).
+    -- Check if the database 'university_db' already exists
+    IF NOT EXISTS (SELECT name FROM sys.databases WHERE name = 'university_db')
+    BEGIN
+        -- If it does not exist, create the database
+        CREATE DATABASE university_db;
+    END;
 
 2.  **Create Tables:**
     Execute the `db_schema.sql` file. This will set up the `Students`, `Courses`, and `Enrollments` tables.
-    ```bash
-    # Example for MySQL CLI:
-    mysql -u your_user -p university_db < db_schema.sql
-    # Or, in your SQL client, open db_schema.sql and run it.
-    ```
-
+    
 3.  **Insert Sample Data:**
-    Execute the `sample_data.sql` file. This will populate your tables with example records.
-    ```bash
-    # Example for MySQL CLI:
-    mysql -u your_user -p university_db < sample_data.sql
-    # Or, in your SQL client, open sample_data.sql and run it.
-    ```
-
+    Execute the `sample_data.sql` file. This will populate tables with example records.
+    
 4.  **Run Analysis Queries:**
     Open `analysis_queries.sql` in your SQL client. Execute the queries one by one to see the analytical results.
 
