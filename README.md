@@ -40,11 +40,11 @@ The project utilizes three core tables to manage university data:
 1.  **Create the Database:**
     -- Check if the database `university_db` already exists
     
-    `IF NOT EXISTS (SELECT name FROM sys.databases WHERE name = 'university_db')
-    BEGIN
+    `IF NOT EXISTS (SELECT name FROM sys.databases WHERE name = 'university_db')`
+    `BEGIN`
         -- If it does not exist, create the database
-        CREATE DATABASE university_db;
-    END;`
+        `CREATE DATABASE university_db;`
+    `END;`
 
 3.  **Create Tables:**
     Execute the `db_schema.sql` file. This will set up the `Students`, `Courses`, and `Enrollments` tables.
