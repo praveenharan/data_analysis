@@ -38,7 +38,7 @@ The project utilizes three core tables to manage university data:
 
 ### Steps
 1.  **Create the Database:**
-    -- Check if the database 'university_db' already exists
+    -- Check if the database `university_db` already exists
     IF NOT EXISTS (SELECT name FROM sys.databases WHERE name = 'university_db')
     BEGIN
         -- If it does not exist, create the database
