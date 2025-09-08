@@ -1,7 +1,7 @@
 # University Course Management System Analysis
 
 ## Project Overview
-This project demonstrates foundational SQL skills by modeling a simplified university course management system. 
+This project demonstrates SQL skills by modeling a simplified university course management system. 
 It involves creating a relational database, populating it with sample data, and executing analytical queries to gain insights into student enrollments and course popularity.
 
 ## Database Schema
