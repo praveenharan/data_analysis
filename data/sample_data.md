@@ -2,7 +2,9 @@
 ```sql
 USE university_db;
 ```
--- Insert sample data into Students
+
+### Insert sample data into Students
+```sql
 INSERT INTO Students 
   (student_name, email, major, enrollment_date) 
 VALUES
@@ -11,8 +13,9 @@ VALUES
 ('Charlie Chaplin', 'charlie.c@example.com', 'Film Studies', '2023-01-15'),
 ('Diana Ross', 'diana.r@example.com', 'Music', '2023-01-15'),
 ('Eve Harrington', 'eve.h@example.com', 'Drama', '2023-09-01'); -- Eve is not yet enrolled in any course
-
+```
 -- Insert sample data into Courses
+```sql
 INSERT INTO Courses 
   (course_name, course_code, department, credits) 
 VALUES
@@ -23,8 +26,9 @@ VALUES
 ('Thermodynamics', 'ENGR301', 'Engineering', 4),
 ('Film History', 'FLM101', 'Film Studies', 3),
 ('Music Theory I', 'MUS101', 'Music', 3);
-
--- Insert sample data into Enrollments
+```
+### Insert sample data into Enrollments
+```sql
 INSERT INTO Enrollments 
   (student_id, course_id, enrollment_date) 
 VALUES
@@ -36,3 +40,4 @@ VALUES
 (3, 6, '2023-09-10'), -- Charlie in Film History
 (4, 7, '2023-09-12'), -- Diana in Music Theory I
 (2, 4, '2024-01-20'); -- Bob in MA201 (new semester)
+```
