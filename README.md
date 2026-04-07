@@ -49,13 +49,13 @@ The project utilizes three core tables to manage university data:
    ```
 
 3.  **Create Tables:**
-    Execute the `db_schema.sql` file. This will set up the `Students`, `Courses`, and `Enrollments` tables.
+    Execute the `db_schema.md` file. This will set up the `Students`, `Courses`, and `Enrollments` tables.
     
 4.  **Insert Sample Data:**
-    Execute the `sample_data.sql` file. This will populate tables with example records.
+    Execute the `sample_data.md` file. This will populate tables with example records.
     
 5.  **Run Analysis Queries:**
-    Open `analysis_queries.sql` in your SQL client. Execute the queries one by one to see the analytical results.
+    Open `analysis_queries.md` in your SQL client. Execute the queries one by one to see the analytical results.
 
 ## Analysis Examples (from `analysis_queries.sql`)
 
