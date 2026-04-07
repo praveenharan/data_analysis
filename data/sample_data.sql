@@ -1,7 +1,9 @@
 USE university_db;
 
 -- Insert sample data into Students
-INSERT INTO Students (student_name, email, major, enrollment_date) VALUES
+INSERT INTO Students 
+  (student_name, email, major, enrollment_date) 
+VALUES
 ('Alice Wonderland', 'alice.w@example.com', 'Computer Science', '2022-09-01'),
 ('Bob The Builder', 'bob.b@example.com', 'Engineering', '2022-09-01'),
 ('Charlie Chaplin', 'charlie.c@example.com', 'Film Studies', '2023-01-15'),
@@ -9,7 +11,9 @@ INSERT INTO Students (student_name, email, major, enrollment_date) VALUES
 ('Eve Harrington', 'eve.h@example.com', 'Drama', '2023-09-01'); -- Eve is not yet enrolled in any course
 
 -- Insert sample data into Courses
-INSERT INTO Courses (course_name, course_code, department, credits) VALUES
+INSERT INTO Courses 
+  (course_name, course_code, department, credits) 
+VALUES
 ('Introduction to Programming', 'CS101', 'Computer Science', 3),
 ('Data Structures', 'CS201', 'Computer Science', 4),
 ('Calculus I', 'MA101', 'Mathematics', 3),
@@ -19,7 +23,9 @@ INSERT INTO Courses (course_name, course_code, department, credits) VALUES
 ('Music Theory I', 'MUS101', 'Music', 3);
 
 -- Insert sample data into Enrollments
-INSERT INTO Enrollments (student_id, course_id, enrollment_date) VALUES
+INSERT INTO Enrollments 
+  (student_id, course_id, enrollment_date) 
+VALUES
 (1, 1, '2023-09-05'), -- Alice in CS101
 (1, 2, '2023-09-05'), -- Alice in CS201
 (1, 3, '2023-09-05'), -- Alice in MA101
