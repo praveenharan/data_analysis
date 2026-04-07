@@ -61,7 +61,10 @@ END;
 ```sql
 -- Check if index exists before creating
 IF NOT EXISTS (
-    SELECT * FROM sys.indexes WHERE name = 'idx_student_id' AND object_id = OBJECT_ID('Enrollments')
+    SELECT *
+    FROM sys.indexes
+    WHERE name = 'idx_student_id' AND
+        object_id = OBJECT_ID('Enrollments')
 )
 BEGIN
     CREATE INDEX idx_student_id ON Enrollments(student_id);
@@ -69,7 +72,10 @@ END;
 ```
 ```sql
 IF NOT EXISTS (
-    SELECT * FROM sys.indexes WHERE name = 'idx_course_id' AND object_id = OBJECT_ID('Enrollments')
+    SELECT *
+    FROM sys.indexes
+    WHERE name = 'idx_course_id' AND
+        object_id = OBJECT_ID('Enrollments')
 )
 BEGIN
     CREATE INDEX idx_course_id ON Enrollments(course_id);
@@ -77,7 +83,10 @@ END;
 ```
 ```sql
 IF NOT EXISTS (
-    SELECT * FROM sys.indexes WHERE name = 'idx_enrollment_date' AND object_id = OBJECT_ID('Enrollments')
+    SELECT *
+    FROM sys.indexes
+    WHERE name = 'idx_enrollment_date' AND
+        object_id = OBJECT_ID('Enrollments')
 )
 BEGIN
     CREATE INDEX idx_enrollment_date ON Enrollments(enrollment_date);
