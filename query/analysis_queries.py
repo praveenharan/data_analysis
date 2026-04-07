@@ -1,3 +1,9 @@
+%%sql
+SELECT 
+    COUNT(*) AS total_students
+FROM 
+    Students;
+
 # Student Analytics Notebook
 
 ## Database Initialization
