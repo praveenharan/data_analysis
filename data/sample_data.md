@@ -14,7 +14,7 @@ VALUES
 ('Diana Ross', 'diana.r@example.com', 'Music', '2023-01-15'),
 ('Eve Harrington', 'eve.h@example.com', 'Drama', '2023-09-01'); -- Eve is not yet enrolled in any course
 ```
--- Insert sample data into Courses
+### Insert sample data into Courses
 ```sql
 INSERT INTO Courses 
   (course_name, course_code, department, credits) 
