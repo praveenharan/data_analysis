@@ -14,11 +14,11 @@ END;
 ```sql
 USE university_db
 ```
-**1. Students Table**
+**1. students Table**
 ```sql
-IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Students')
+IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'students')
 BEGIN
-    CREATE TABLE Students (
+    CREATE TABLE students (
         student_id INT PRIMARY KEY IDENTITY(1,1), -- SQL Server equivalent of AUTO_INCREMENT
         student_name VARCHAR(255) NOT NULL,
         email VARCHAR(255) UNIQUE NOT NULL,
@@ -28,11 +28,11 @@ BEGIN
 END;
 ```
 
-**2. Courses Table**
+**2. courses Table**
 ```sql
-IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Courses')
+IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'courses')
 BEGIN
-    CREATE TABLE Courses (
+    CREATE TABLE courses (
         course_id INT PRIMARY KEY IDENTITY(1,1), -- SQL Server equivalent of AUTO_INCREMENT
         course_name VARCHAR(255) NOT NULL,
         course_code VARCHAR(20) UNIQUE NOT NULL,
@@ -41,19 +41,19 @@ BEGIN
     );
 END;
 ```
-**3. Enrollments Table (Many-to-Many relationship between Students and Courses)**
+**3. enrollments Table (Many-to-Many relationship between students and courses)**
 ```sql
-IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Enrollments')
+IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'enrollments')
 BEGIN
-    CREATE TABLE Enrollments (
+    CREATE TABLE enrollments (
         enrollment_id INT PRIMARY KEY IDENTITY(1,1), -- SQL Server equivalent of AUTO_INCREMENT
         student_id INT NOT NULL,
         course_id INT NOT NULL,
         enrollment_date DATE NOT NULL,
         -- Ensure a student can't enroll in the same course multiple times
         UNIQUE (student_id, course_id),
-        FOREIGN KEY (student_id) REFERENCES Students(student_id) ON DELETE CASCADE,
-        FOREIGN KEY (course_id) REFERENCES Courses(course_id) ON DELETE CASCADE
+        FOREIGN KEY (student_id) REFERENCES students(student_id) ON DELETE CASCADE,
+        FOREIGN KEY (course_id) REFERENCES courses(course_id) ON DELETE CASCADE
     );
 END;
 ```
