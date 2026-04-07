@@ -42,8 +42,6 @@ The project utilizes three core tables to manage university data:
 ```sql
     IF NOT EXISTS
     (SELECT name FROM sys.databases WHERE name = 'university_db')
-```
-```sql
     -- If it does not exist, create the database
    BEGIN
       CREATE DATABASE university_db
