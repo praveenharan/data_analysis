@@ -44,11 +44,10 @@ The project utilizes three core tables to manage university data:
     (SELECT name FROM sys.databases WHERE name = 'university_db')
 ```
 ```sql
-    BEGIN
     -- If it does not exist, create the database
-
-    CREATE DATABASE university_db
-    END;
+   BEGIN
+      CREATE DATABASE university_db
+   END;
 ```
 
 3.  **Create Tables:**
