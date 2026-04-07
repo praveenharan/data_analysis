@@ -34,7 +34,7 @@ The project utilizes three core tables to manage university data:
 ## How to Set Up and Run
 
 ### Prerequisites
-* These scripts use general SQL syntax and have been verified to work correctly within SSMS (SQL Server Management Studio).
+* These scripts use general SQL syntax and have been verified to work correctly within MS Fabric.
 
 ### Steps
 1.  **Create the Database:**
