@@ -27,8 +27,9 @@ BEGIN
     );
 END;
 ```
-```sql
+
 ***2. Courses Table***
+```sql
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Courses')
 BEGIN
     CREATE TABLE Courses (
