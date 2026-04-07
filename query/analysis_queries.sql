@@ -1,4 +1,4 @@
-USE university_db;
+## USE university_db;
 
 -- 1. Get the total number of students
 SELECT 
