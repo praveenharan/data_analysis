@@ -1,11 +1,12 @@
 ## USE university_db;
 
 -- 1. Get the total number of students
+%%sql
 SELECT 
     COUNT(*) AS total_students
 FROM
     Students;
-
+%%
 -- 2. Get the total number of courses
 SELECT 
     COUNT(*) AS total_courses 
