@@ -57,7 +57,7 @@ The project utilizes three core tables to manage university data:
 5.  **Run Analysis Queries:**
     Open `analysis_queries.md` in your SQL client. Execute the queries one by one to see the analytical results.
 
-## Analysis Examples (from `analysis_queries.sql`)
+## Analysis Examples (from `analysis_queries.md`)
 
 * **Total Number of Students and Courses:** Basic counts for system overview.
 * **Courses with Most Enrollments:** Identifies popular courses.
