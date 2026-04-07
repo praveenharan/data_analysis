@@ -1,13 +1,15 @@
--- DTABASE: university_db
--- TABLES: Students, Courses, Enrollments
+# DTABASE: university_db
+## TABLES: Students, Courses, Enrollments
 
--- Check if the database 'university_db' already exists
+### Check if the database 'university_db' already exists
+
+```sql
 IF NOT EXISTS (SELECT name FROM sys.databases WHERE name = 'university_db')
 BEGIN
     -- If it does not exist, create the database
     CREATE DATABASE university_db;
 END;
-
+```
 -- Use the newly created database
 USE university_db;
 
