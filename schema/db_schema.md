@@ -1,5 +1,5 @@
-# DTABASE: university_db
-## TABLES: Students, Courses, Enrollments
+# Database : university_db
+## Tables: Students, Courses, Enrollments
 
 ### Check if the database 'university_db' already exists
 
