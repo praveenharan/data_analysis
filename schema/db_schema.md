@@ -28,7 +28,7 @@ BEGIN
 END;
 ```
 
-***2. Courses Table***
+**2. Courses Table**
 ```sql
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Courses')
 BEGIN
@@ -41,7 +41,8 @@ BEGIN
     );
 END;
 ```
--- 3. Enrollments Table (Many-to-Many relationship between Students and Courses)
+**3. Enrollments Table (Many-to-Many relationship between Students and Courses)**
+```sql
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Enrollments')
 BEGIN
     CREATE TABLE Enrollments (
@@ -55,8 +56,9 @@ BEGIN
         FOREIGN KEY (course_id) REFERENCES Courses(course_id) ON DELETE CASCADE
     );
 END;
-
--- Add indexes for performance on frequently queried columns
+```
+**Add indexes for performance on frequently queried columns**
+```sql
 -- Check if index exists before creating
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE name = 'idx_student_id' AND object_id = OBJECT_ID('Enrollments'))
 BEGIN
@@ -72,3 +74,4 @@ IF NOT EXISTS (SELECT * FROM sys.indexes WHERE name = 'idx_enrollment_date' AND 
 BEGIN
     CREATE INDEX idx_enrollment_date ON Enrollments(enrollment_date);
 END;
+```
