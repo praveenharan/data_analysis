@@ -7,7 +7,7 @@
 IF NOT EXISTS (SELECT name FROM sys.databases WHERE name = 'university_db')
 BEGIN
     -- If it does not exist, create the database
-    CREATE DATABASE university_db;
+    CREATE DATABASE university_db
 END;
 ```
 ### Use the newly created database
