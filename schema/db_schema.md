@@ -14,7 +14,7 @@ END;
 ```sql
 USE university_db;
 ```
-*1. Students Table*
+**1. Students Table**
 ```sql
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Students')
 BEGIN
