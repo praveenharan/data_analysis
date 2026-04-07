@@ -4,24 +4,27 @@
 ```sql
 USE university_db;
 ```
-### -- 1. Get the total number of students
+### 1. Get the total number of students
 ```sql
 SELECT 
     COUNT(*) AS total_students
 FROM
     Students;
 ```
--- 2. Get the total number of courses
+### 2. Get the total number of courses
+```sql
 SELECT 
     COUNT(*) AS total_courses 
 FROM Courses;
-
--- 3. Get the total number of enrollments
+```
+### 3. Get the total number of enrollments
+```sql
 SELECT 
     COUNT(*) AS total_enrollments 
 FROM Enrollments;
-
--- 4. Find the top 3 most enrolled courses (by number of students)
+```
+### 4. Find the top 3 most enrolled courses (by number of students)
+```sql
 SELECT TOP 3
     C.course_name,
     C.course_code,
@@ -35,9 +38,10 @@ GROUP BY
     C.course_code
 ORDER BY
     number_of_enrollments DESC;
-
--- 5. List all students and the courses they are enrolled in
---    (Includes students not enrolled in any course)
+```
+### 5. List all students and the courses they are enrolled in
+######   (Includes students not enrolled in any course)
+```sql
 SELECT
     S.student_name,
     S.major,
@@ -51,8 +55,9 @@ LEFT JOIN
     Courses C ON E.course_id = C.course_id
 ORDER BY
     S.student_name, C.course_name;
-
--- 6. Find students who are not enrolled in any course
+```
+### 6. Find students who are not enrolled in any course
+```sql
 SELECT
     S.student_name,
     S.email,
@@ -63,8 +68,9 @@ LEFT JOIN
     Enrollments E ON S.student_id = E.student_id
 WHERE
     E.enrollment_id IS NULL;
-
--- 7. Calculate the total credits each student is currently enrolled in
+```
+### 7. Calculate the total credits each student is currently enrolled in
+```sql
 SELECT
     S.student_name,
     S.major,
@@ -79,8 +85,9 @@ GROUP BY
     S.student_name, S.major
 ORDER BY
     total_credits_enrolled DESC;
-
--- 8. Count the number of enrollments per department
+```
+### 8. Count the number of enrollments per department
+```sql
 SELECT
     C.department,
     COUNT(E.enrollment_id) AS total_enrollments_in_department
@@ -92,8 +99,9 @@ GROUP BY
     C.department
 ORDER BY
     total_enrollments_in_department DESC;
-
--- 9. Find courses that have no enrollments (e.g., new courses, unpopular courses)
+```
+### 9. Find courses that have no enrollments (e.g., new courses, unpopular courses)
+```sql
 SELECT
     C.course_name,
     C.course_code,
@@ -104,8 +112,9 @@ LEFT JOIN
     Enrollments E ON C.course_id = E.course_id
 WHERE
     E.enrollment_id IS NULL;
-
--- 10. Get the average number of courses each enrolled student takes
+```
+### 10. Get the average number of courses each enrolled student takes
+```sql
 SELECT
     AVG(courses_taken) AS average_courses_per_student
 FROM (
@@ -118,3 +127,4 @@ FROM (
     GROUP BY
         S.student_id
 ) AS student_course_counts;
+```
