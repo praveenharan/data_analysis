@@ -47,7 +47,7 @@ The project utilizes three core tables to manage university data:
     BEGIN
     -- If it does not exist, create the database
 
-    CREATE DATABASE university_db;`
+    CREATE DATABASE university_db
     END;
 ```
 
