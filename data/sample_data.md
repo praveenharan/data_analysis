@@ -1,5 +1,7 @@
+### Use Database 
+```sql
 USE university_db;
-
+```
 -- Insert sample data into Students
 INSERT INTO Students 
   (student_name, email, major, enrollment_date) 
