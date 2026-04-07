@@ -10,10 +10,12 @@ BEGIN
     CREATE DATABASE university_db;
 END;
 ```
--- Use the newly created database
+### Use the newly created database
+```sql
 USE university_db;
-
+```
 -- 1. Students Table
+```sql
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Students')
 BEGIN
     CREATE TABLE Students (
@@ -24,8 +26,9 @@ BEGIN
         enrollment_date DATE NOT NULL
     );
 END;
-
--- 2. Courses Table
+```
+```sql
+***2. Courses Table***
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Courses')
 BEGIN
     CREATE TABLE Courses (
@@ -36,7 +39,7 @@ BEGIN
         credits INT NOT NULL
     );
 END;
-
+```
 -- 3. Enrollments Table (Many-to-Many relationship between Students and Courses)
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Enrollments')
 BEGIN
