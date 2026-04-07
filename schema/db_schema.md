@@ -12,7 +12,7 @@ END;
 ```
 ### Use the newly created database
 ```sql
-USE university_db;
+USE university_db
 ```
 **1. Students Table**
 ```sql
