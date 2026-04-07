@@ -1,5 +1,5 @@
 # Database : university_db
-## Tables: Students, Courses, Enrollments
+## Tables: students, courses, enrollments
 
 ### Check if the database 'university_db' already exists
 
