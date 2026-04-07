@@ -1,4 +1,8 @@
-## USE university_db;
+# Student Analytics Notebook
+
+## Database Initialization
+```sql
+USE university_db;
 
 -- 1. Get the total number of students
 %%sql
