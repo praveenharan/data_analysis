@@ -11,11 +11,17 @@ SELECT
     COUNT(*) AS total_students
 FROM
     Students;
+
+-- KQL
+Students
+| count(*)
+
 -- PySpark
 display(
     Students.\
     count(*).aias("total_students")
 )
+
 ```
 ### 2. Get the total number of courses
 ```sql
