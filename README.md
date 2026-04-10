@@ -37,9 +37,9 @@ The project utilizes three core tables to manage university data:
 * These scripts use general SQL syntax and have been verified to work correctly within MS Fabric.
 
 ### Steps
-### 1.  Create the Database:
-   **Check if the database 'university_db' already exists**
+**Create the Database:**
    ```sql
+  -- Check if the database 'university_db' already exists**
    IF NOT EXISTS
       (SELECT name FROM sys.databases WHERE name = 'university_db')
    -- If it does not exist, create the database
@@ -47,15 +47,14 @@ The project utilizes three core tables to manage university data:
       CREATE DATABASE university_db
    END;
    ```
-
-3.  **Create Tables:**
+**Create Tables:**
     Execute the `db_schema.md` file. This will set up the `Students`, `Courses`, and `Enrollments` tables.
     
-4.  **Insert Sample Data:**
+**Insert Sample Data:**
     Execute the `sample_data.md` file. This will populate tables with example records.
     
-5.  **Run Analysis Queries:**
-    Open `analysis_queries.md` in your SQL client. Execute the queries one by one to see the analytical results.
+**Run Analysis Queries:**
+    Open `analysis_queries.md`. Execute the queries one by one to see the analytical results.
 
 ## Analysis Examples (from `analysis_queries.md`)
 
