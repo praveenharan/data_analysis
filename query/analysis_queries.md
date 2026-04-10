@@ -128,3 +128,20 @@ FROM (
         S.student_id
 ) AS student_course_counts;
 ```
+#### 10. Get the average number of courses each enrolled student takes - CTE
+```sql
+WITH StudentCourseCounts AS (
+    SELECT
+        COUNT(E.course_id) AS courses_taken
+    FROM
+        Students S
+    JOIN
+        Enrollments E ON S.student_id = E.student_id
+    GROUP BY
+        S.student_id
+)
+SELECT
+    AVG(courses_taken) AS average_courses_per_student
+FROM
+    StudentCourseCounts;
+```
