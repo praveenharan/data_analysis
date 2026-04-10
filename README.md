@@ -37,8 +37,8 @@ The project utilizes three core tables to manage university data:
 * These scripts use general SQL syntax and have been verified to work correctly within MS Fabric.
 
 ### Steps
-###1.  Create the Database:
-   *** Check if the database 'university_db' already exists***
+### 1.  Create the Database:
+   **Check if the database 'university_db' already exists**
    ```sql
    IF NOT EXISTS
       (SELECT name FROM sys.databases WHERE name = 'university_db')
