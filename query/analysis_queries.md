@@ -14,12 +14,11 @@ FROM
 
 -- KQL
 Students
-| count(*)
+    | summarize total_students = count()
 
 -- PySpark
 display(
-    Students.\
-    count(*).aias("total_students")
+    Students.select(count("*").alias("total_students"))
 )
 
 ```
