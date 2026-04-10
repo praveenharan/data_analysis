@@ -115,6 +115,7 @@ WHERE
 ```
 ### 10. Get the average number of courses each enrolled student takes
 ```sql
+** INNER QUERY **
 SELECT
     AVG(courses_taken) AS average_courses_per_student
 FROM (
@@ -127,9 +128,9 @@ FROM (
     GROUP BY
         S.student_id
 ) AS student_course_counts;
-```
-#### 10. Get the average number of courses each enrolled student takes - CTE
-```sql
+
+**CTE**
+
 WITH StudentCourseCounts AS (
     SELECT
         COUNT(E.course_id) AS courses_taken
