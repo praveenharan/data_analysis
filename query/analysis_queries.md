@@ -6,12 +6,12 @@ USE university_db;
 ```
 ### 1. Get the total number of students
 ```sql
--- **SQL**
+-- SQL
 SELECT 
     COUNT(*) AS total_students
 FROM
     Students;
--- ***PySpark*
+-- PySpark
 display(
     Students.\
     count(*).aias("total_students")
