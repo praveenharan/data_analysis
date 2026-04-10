@@ -38,6 +38,30 @@ GROUP BY
     C.course_code
 ORDER BY
     number_of_enrollments DESC;
+
+-- WINDOW FUNCTION
+WITH RankedCourses AS (
+    SELECT
+        C.course_name,
+        C.course_code,
+        COUNT(E.student_id) AS number_of_enrollments,
+        RANK() OVER (ORDER BY COUNT(E.student_id) DESC) AS enrollment_rank
+    FROM
+        Courses C
+    JOIN
+        Enrollments E ON C.course_id = E.course_id
+    GROUP BY
+        C.course_name,
+        C.course_code
+)
+SELECT
+    course_name,
+    course_code,
+    number_of_enrollments
+FROM
+    RankedCourses
+WHERE
+    enrollment_rank <= 3;
 ```
 ### 5. List all students and the courses they are enrolled in
 ######   (Includes students not enrolled in any course)
