@@ -27,9 +27,9 @@ The project utilizes three core tables to manage university data:
 
 ## Files in this Repository
 
-* `db_schema.sql`: SQL script to define and create the database tables.
-* `sample_data.sql`: SQL script to insert illustrative sample data into the tables.
-* `analysis_queries.sql`: SQL queries designed to extract meaningful insights from the data.
+* `db_schema.md`: SQL script to define and create the database tables.
+* `sample_data.md`: SQL script to insert illustrative sample data into the tables.
+* `analysis_queries.md`: SQL queries designed to extract meaningful insights from the data.
 
 ## How to Set Up and Run
 
