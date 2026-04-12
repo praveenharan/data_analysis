@@ -34,7 +34,15 @@ FROM Courses;
 ```
 #### Using KQL
 ```sql
-
+Courses
+| summarize total_courses = count()
+```
+#### Using PySpark
+```sql
+display(
+    Courses.\
+    select(count("*").alias("total_courses"))
+)
 ```
 
 ### 3. Get the total number of enrollments
