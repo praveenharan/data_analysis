@@ -5,9 +5,9 @@
 USE university_db;
 ```
 ### 1. Get the total number of students
-```sql
--- SQL
-SELECT 
+
+#### -- SQL
+```sqlSELECT 
     COUNT(*) AS total_students
 FROM
     Students;
