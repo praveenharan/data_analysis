@@ -26,11 +26,17 @@ display(
 
 ```
 ### 2. Get the total number of courses
+#### Using SQL
 ```sql
 SELECT 
     COUNT(*) AS total_courses 
 FROM Courses;
 ```
+#### Using KQL
+```sql
+
+```
+
 ### 3. Get the total number of enrollments
 ```sql
 SELECT 
