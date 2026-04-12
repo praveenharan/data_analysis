@@ -6,17 +6,20 @@ USE university_db;
 ```
 ### 1. Get the total number of students
 
-#### -- SQL
-```sqlSELECT 
+#### Using SQL
+```sql
+SELECT 
     COUNT(*) AS total_students
 FROM
     Students;
-
--- KQL
+```
+#### Using KQL
+```sql
 Students
     | summarize total_students = count()
-
--- PySpark
+```
+#### Using PySpark
+```sql
 display(
     Students.select(count("*").alias("total_students"))
 )
